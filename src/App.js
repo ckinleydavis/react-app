@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <p>Header Section</p>
+       <p>This is the Header Section</p>
         {/* <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -21,10 +21,10 @@ function App() {
         </a> */}
       </header>
       <main className="App-content">
-        <p>Content Section</p>
+        <p>This is the Content Section</p>
       </main>
       <footer className="App-footer">
-        <p>Footer Section</p>
+        <p>This is the Footer Section</p>
       </footer>
     </div>
   );
