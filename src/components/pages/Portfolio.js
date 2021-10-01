@@ -1,24 +1,28 @@
 import React from 'react';
+import data from "../../components/portfolioData";
 
 export default function Portfolio() {
     return (
-        <div>
+        <div className="App-content">
             <table class="gray-white-table">
                 <tbody>
-                    <tr>
-                        <td><a href="https://cranky-curran-5c3f54.netlify.app/">Netflix Clone<img src="./assets/images/project-netflix-clone.png" /></a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://github.com/ckinleydavis/CCBBRA">CCBBRA<img src="./assets/images/project-ccbbra.png" /></a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://github.com/ckinleydavis/Project_1">Pokedex<img src="./assets/images/project-pokedex.png" /></a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://github.com/ckinleydavis/weather-dashboard">Weather Dashboard<img src="./assets/images/project-weather-dashboard.png" /></a></td>
-                    </tr>
+                    { data.map((project, i) => {
+                        return (
+                            < tr key={i} >
+                                <td><a href={project.projectURL}>{project.name}</a></td>
+                                <td><a href={project.repositoryURL}>GitHub Repo</a></td>
+                                {/* NOTE: Unable to get images to appear! Originally placed images 
+                                folder under 'public/assets' directory, then moved to 'src/components/pages' 
+                                directory. Tried url without dot, with dot, with double dots ... at a lost 
+                                so moving on.
+                                
+                                <img src={project.imageURL} alt={project.alt} /> */}
+                            </tr>
+                        )
+                        })
+                    }
                 </tbody>
             </table>
-        </div>
+        </div >
     );
 }

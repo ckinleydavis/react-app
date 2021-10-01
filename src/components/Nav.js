@@ -1,30 +1,49 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-export default function Nav( { currentPage, pageChangeHandler }) {
+export default function Nav() {
     const developerName = 'CARLA KINLEY-DAVIS';
 
     return (
-        <div>{ developerName }
-            <nav className="header-nav">
-                <ul className="nav nav-tabs">
-                    <li className="nav-item">
-                        <a href="#home" onClick={() => pageChangeHandler('Home')} className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}>Home</a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="#about" onClick={() => pageChangeHandler('About')} className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}>About Me</a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="#portfolio" onClick={() => pageChangeHandler('Portfolio')} className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}>Portfolio</a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="https://bit.ly/39p9tev" target="_blank" onClick={() => pageChangeHandler('Resume')} className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}>Resume</a>
-                    </li>
-                    <li className="nav-item">
-                        <a href="#contact" onClick={() => pageChangeHandler('Portfolio')} className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}>Contact Me</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+<div className="App-header">
+    <ul className="nav nav-tabs" id="myTab" role="tablist">
+        <li className="nav-item" role="presentation">
+            <button className="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><NavLink to="/">About Me</NavLink></button>
+        </li>
+        <li className="nav-item" role="presentation">
+            <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><NavLink to="/portfolio">Portfolio</NavLink></button>
+        </li>
+        <li className="nav-item" role="presentation">
+            <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false"><NavLink to="/resume">Resume</NavLink></button>
+        </li>
+        <li className="nav-item" role="presentation">
+            <button className="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false"><NavLink to="/contact">Contact Me</NavLink></button>
+        </li>
+    </ul>
+    {/* <div className="tab-content" id="myTabContent">
+        <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+        <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+        <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+    </div> */}
+</div>
+        
+/*
+<ul className="nav nav-tabs">
+    <li className="nav-item">
+        <NavLink to="/">About Me</NavLink>
+    </li>
+    <li className="nav-item">
+        <NavLink to="/portfolio">Portfolio</NavLink>
+    </li>
+    <li className="nav-item">
+        <NavLink to="/resume">Resume</NavLink>
+    </li>
+    <li className="nav-item">
+        <NavLink to="/contact">Contact Me</NavLink>
+    </li>
+</ul>
+*/
+            
     );
 }
 

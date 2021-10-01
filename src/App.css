@@ -13,6 +13,22 @@
   }
 }
 
+.company-header-avatar{
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 60px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 60px;
+  -moz-background-clip: padding;
+  border-radius: 60px;
+  background-clip: padding-box;
+  margin: 7px 0 0 5px;
+  float: left;
+  vertical-align: middle;
+  background-size: cover;
+  background-position: center center;
+}
+
 .App-header {
   background-color: #475a81;
   min-height: 15vh;
@@ -26,6 +42,7 @@
 
 .App-content {
   background-color: #cdd5e4;
+  /* background-color: #white; */
   min-height: 75vh;
   display: flex;
   flex-direction: column;
@@ -53,7 +70,7 @@
 .gray-white-table { 
   border-collapse:collapse;
   border-style:hidden;
-  width:100%; 
+  width:40%; 
 }
 
 .gray-white-table td:first-child { 
